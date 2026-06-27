@@ -29,9 +29,9 @@ Not a Security Fortress - This is not a replacement for Two-Factor Authenticatio
 
 Maintenance Responsibility - Because this hooks into WordPress core, you must test compatibility after major core updates. 
 
-As is, the .htacess amendment blocks access to WordPress' password-reset function.
-
 The "Lockout" Risk - If you forget your custom slug you must have access to your server via FTP/SSH to rename or remove the mu-plugin file to regain entry. 
+
+As is, the .htacess amendment blocks access to WordPress' password-reset function.
 
 Contra indicators 
 * Some pre-packaged templates may require unfettered access to WordPress's mandated url.
