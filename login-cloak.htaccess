@@ -1,0 +1,15 @@
+// This is just an excerpt and not a full .htacess file
+// To be used with barebonesWP-signin-cloak.php mu_plugin
+
+
+// Enter the following edits above '# BEGIN WordPress'
+// Note, must be Apache. Cookie must match the cookie named in the mu_plugin
+// Please download and save your existing .htaccess file before 
+// As is, the .htacess amendment blocks access to WordPress' password-reset function.
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/wp-login\.php [NC]
+RewriteCond %{HTTP_COOKIE} !sys_id_token=allow
+RewriteRule ^ - [R=404,L]
+</IfModule>
